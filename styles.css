@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  border-radius: 28px;
+  background: #343232;
+  box-shadow: inset 35px 35px 70px #2b2929, inset -35px -35px 70px #3d3b3b;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.maze-container {
+  display: grid;
+  gap: 1px;
+  margin: 0 auto;
+  background-color: #333;
+  border: 2px solid #333;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.3s;
+}
+
+.wall {
+  background-color: #333;
+}
+.path {
+  background-color: white;
+}
+.start {
+  background-color: red;
+}
+.end {
+  background-color: green;
+}
+.solution {
+  background-color: yellow;
+  opacity: 0.5;
+}
+.explored {
+  background-color: rgba(255, 165, 0, 0.3); /* Light orange with transparency */
+}
+
+.stats-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#explorationLog {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+  width: 100%;
+}
+
+#explorationLog ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#explorationLog li {
+  padding: 2px 5px;
+  font-size: 0.8em;
+  background-color: #f0f0f0;
+  margin: 2px 0;
+  border-radius: 3px;
+}
+
+.cell.solution {
+  background-color: green !important;
+}

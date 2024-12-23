@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Maze Solver</h1>
+      <div class="controls">
+        <button id="generateMaze">Generate Maze</button>
+        <select id="algorithmSelector">
+          <optgroup label="DFS">
+            <option value="dfsIterative">DFS (Iterative)</option>
+            <option value="dfsRecursive">DFS (Recursive)</option>
+          </optgroup>
+          <optgroup label="BFS">
+            <option value="bfsIterative">BFS (Iterative)</option>
+            <option value="bfsRecursive">BFS (Recursive)</option>
+          </optgroup>
+        </select>
+        <button id="solveMaze">Solve Maze</button>
+      </div>
+      <div id="mazeContainer" class="maze-container"></div>
+      <div id="statsContainer" class="stats-container">
+        <p>Path Length: <span id="pathLength">-</span></p>
+      </div>
+    </div>
+    <script src="maze.js"></script>
+  </body>
+</html>
